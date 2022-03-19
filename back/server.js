@@ -4,7 +4,7 @@ const mongoose= require('mongoose');
 const bodyParser = require('body-parser'); 
 const nodemailer = require('nodemailer');
 const path = require('path');
-const port =  5000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 const massage = require('./massageModel');

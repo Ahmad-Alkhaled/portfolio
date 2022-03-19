@@ -1,0 +1,96 @@
+.ProjectsBox{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    background-color: rgba(32, 32, 32, 0.938);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:  20px 0;
+    overflow-y: auto;
+    gap: 10px;
+}
+.Project{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 13px white;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    margin: 30px;
+}
+.Demo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    justify-content:center;
+    color:white;
+
+    transition: background-color 2s;
+    opacity: 0.5;
+}
+.Project a{
+    width: 100%;
+
+}
+.Demo:hover{
+    opacity: 1;
+}
+.pro1{
+    background-image: url('../img/move-app.png');
+}
+.pro2{
+    background-image: url('../img/trello.png');
+}
+.pro3{
+    background-image: url('../img/blog.png');
+}
+.pro4{
+    background-image: url('../img/CoronaStatus.png');
+}
+.pro5{
+    background-image: url('../img/OnlineShop.png');
+}
+.pro6{
+    background-image: url('../img/wether-app.png');
+    
+}
+@media (min-width: 1023px) {
+    .Projects{
+        /* background-color: aquamarine; */
+        margin-left: 8%;
+    }
+    .ProjectsBox{
+        height: 80%;
+        margin: 0 auto;
+        width: 80%;
+        box-shadow: 0px 0px 13px white;
+        
+    }
+    .ProjectsBox .Project{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1d1d1d;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(41, 40, 40); 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(97, 97, 96, 0.829); 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #503c3c; 
+  }
+  

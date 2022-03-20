@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 const express = require('express');
 const mongoose= require('mongoose');
 const bodyParser = require('body-parser'); 
@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
     );
-    res.header("Access-Control-Allow-Methods", "GET")
+    res.header("Access-Control-Allow-Methods", "POST", "GET")
     
     next();
 });
@@ -83,18 +83,19 @@ app.post('/massage', (req, res) =>{
     });
 });
 
-
-app.get('/', (req , res ) => {
-
-    res.status(200).sendFile( path.join(__dirname,'../dist' , 'index.html'));
-
-});
-
 app.get('/CV', (req , res ) => {
 
     res.status(200).sendFile( path.join(__dirname, '../back', 'CV.pdf'));
     
 });
+
+app.get('/*', (req , res ) => {
+
+    res.status(200).sendFile( path.join(__dirname,'../dist' , 'index.html'));
+
+});
+
+
 
 
 app.listen(port,()=>{

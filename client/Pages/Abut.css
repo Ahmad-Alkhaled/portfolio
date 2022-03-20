@@ -6,11 +6,13 @@
     flex-wrap: wrap;
     align-items:center;
     top:-150px;
-    margin-left: 100px;
+    padding-top: 50px;
+    
     /* background-color:rgba(8, 8, 8, 0.753) */
    
    
 }
+
 .img{
     width: 150px;
     height: 150px;
@@ -139,6 +141,8 @@
     background-color:rgb(63, 60, 60);
     overflow: hidden;
     overflow-y: auto;
+   
+    padding-bottom: 200px;
 }
 
 .More i{
@@ -185,7 +189,6 @@
 
     .CV{
         max-width: 600px;
-        
     }
     .More{
         position: absolute;
@@ -193,23 +196,20 @@
         height: 100%;
         left: 0;
         background-color:rgb(63, 60, 60);
-     
-        
+        margin-left: -100px;
     }
     .Abut{
         width: 80%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        /* background-color: rgb(79, 80, 82); */
-
+        margin-left: 100px;
     }
     .img{
         height: 50%;
         border-radius: 20px;
     }
     .info{
-        /* background-color:cadetblue; */
         width: 65%;
         height: 60%;
         display: flex;
@@ -222,30 +222,20 @@
         font-size: 40px;
     }
     .abut{
-        font-size:23px
+        font-size:23px;
     }
     .btnBox {
-       
-        justify-content:flex-start
-
+        justify-content:flex-start;
     }
     .btnBox button{
         font-size: 30px;
         margin-right: 50px;
     }
-
 }
 
-
-
-
-  
 .skills-section{
     padding-top: 20px;
-  
-   
     }
-    
     .skills-header{
     text-align: center;
     color: #fff;
@@ -278,7 +268,9 @@
  
     
     }
+
     .skills-box{
+       
     width: 400px;
     padding: 1rem 90px;
     color: #000;
@@ -371,4 +363,4 @@
      grid-tempLate-columns:2fr;
      padding: 2rem 50px;
      }
-    }
+}

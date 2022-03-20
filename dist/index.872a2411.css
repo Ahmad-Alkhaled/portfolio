@@ -1,26 +1,24 @@
 body{
     height: 100vh;
     overflow: hidden;
+    
     user-select: none;
     margin: 0;
-    
 }
 .App {
  width: 100vw;
  height: 160vh;
- 
- /* min-height: 1000px; */
  background-color: rgb(0, 0, 0);
  transition: background-color 2s;
  overflow: hidden;
-
+ overflow-y: auto;
 }
 iframe{
     position: absolute;
     z-index: 1;
     height: 105vh;
     background-color:rgba(0, 0, 255, 0);
-  }
+}
 .styleBox{
     position: absolute;
     top:-20px;
@@ -31,20 +29,13 @@ iframe{
     transition: background-color 2s;
 }
 .Page{
-   
-   
     position: absolute;
     z-index: 1;
-   
-   
-    
 }
-
 .Nav{
     position: absolute;
     width: 100%;
     height: 60px;
-    /* background-color:aqua; */
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -60,23 +51,12 @@ iframe{
     border-radius: 50%;
     box-shadow:0px 0px  10px rgb(151, 148, 148);
 }
-
-/* .settings i{
-    transform: rotate(0deg);
-    transition: transform 1s;
-    
-  }
-.settings i:hover{
-    transform: rotate(360deg);
-    font-size:29px
-  } */
-  .bg{
-      
-      width: 100%;
-      height: 40px;
-      background-color:#464343a4;
-      margin: 10px 0;
-  }
+.bg{
+    width: 100%;
+    height: 40px;
+    background-color:#464343a4;
+    margin: 10px 0;
+}
 .setBox{
     position: absolute;
     top:80px;
@@ -90,7 +70,6 @@ iframe{
     user-select: none; 
 }  
 .mode,.bg{
-   
     width: 100%;
     height: 40px;
     background-color:#464343a4;
@@ -101,7 +80,6 @@ iframe{
     color:rgb(170, 166, 166);
     position: relative;
     top:20px;
-
 }
 
 .mode .div {
@@ -847,11 +825,13 @@ body {
     flex-wrap: wrap;
     align-items:center;
     top:-150px;
-    margin-left: 100px;
+    padding-top: 50px;
+    
     /* background-color:rgba(8, 8, 8, 0.753) */
    
    
 }
+
 .img{
     width: 150px;
     height: 150px;
@@ -865,11 +845,13 @@ body {
     overflow: hidden;
     
 }
+
 .filter{
     width: 100%;
     height: 100%;
    
 }
+
 .info{
     width: 100%;
     height: 80%;
@@ -878,27 +860,33 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .Hi,.name{
     font-size: 25px;
     font-weight: bold;
     transition: color  2s;
     
 }
+
 .name{
     background-color:#ffffff81;
     transition :background-color  color  2s;
 }
+
 .abut{
     transition: color 2s;
 }
+
 .Hi i{
     color:yellow;
     transform: rotate(20deg);
 }
+
 .typing{
     color:white;
     font-weight: bold;
 }
+
 .btnBox{
     width: 100%;
     height: 50px;
@@ -908,6 +896,7 @@ body {
     align-items: center;
     justify-content:space-around;
 }
+
 .btnBox button{
     font-size:20px;
     padding: 2px 20px;
@@ -921,6 +910,7 @@ body {
     cursor: pointer;
     transition: border-color 2s;
 }
+
 .btnBox button i{
     position: relative;
     border-radius: 50%;
@@ -928,6 +918,7 @@ body {
     right: -18px;
     transition: background-color 2s;
 }
+
 .CV{
     position: absolute;
     width: 100%;
@@ -937,11 +928,13 @@ body {
     background-position: center center;
     background-size: cover;
 }
+
 .cvimg{
     position: absolute;
     width: 100%;
     height: 100%;
 }
+
 .CV .fa-times{
     position: relative;
     float: right;
@@ -951,10 +944,12 @@ body {
     background-color: rgba(165, 159, 159, 0.507);
     z-index: 1;
 }
+
 .CV .fa-times:hover{
     color:rgb(7, 7, 7);
     background-color: rgba(165, 159, 159, 0.938);
 }
+
 .fa-cloud-download-alt{
     color:aliceblue;
     text-shadow: 0px 0px 13px black;
@@ -967,12 +962,14 @@ body {
     bottom: 0;
     opacity: 0.5;
 }
+
 .fa-cloud-download-alt:hover{
     background-color:rgb(128, 128, 128);
     color:rgb(173, 206, 235);
     opacity: 1;
  
 }
+
 .More{
     position: absolute;
     width: 100%;
@@ -980,7 +977,10 @@ body {
     background-color:rgb(63, 60, 60);
     overflow: hidden;
     overflow-y: auto;
+   
+    padding-bottom: 200px;
 }
+
 .More i{
     position: relative;
     float: right;
@@ -990,6 +990,7 @@ body {
     background-color: rgba(165, 159, 159, 0.507);
     z-index: 1;
 }
+
 @media (min-width:620px) 
 {
     .Abut{
@@ -1014,6 +1015,7 @@ body {
     }
     
 }
+
 @media (min-width:426px) {
     .CV{
         width: 50%;
@@ -1021,11 +1023,11 @@ body {
     }
 
 }
+
 @media (min-width: 1023px) {
 
     .CV{
         max-width: 600px;
-        
     }
     .More{
         position: absolute;
@@ -1033,23 +1035,20 @@ body {
         height: 100%;
         left: 0;
         background-color:rgb(63, 60, 60);
-     
-        
+        margin-left: -100px;
     }
     .Abut{
         width: 80%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        /* background-color: rgb(79, 80, 82); */
-
+        margin-left: 100px;
     }
     .img{
         height: 50%;
         border-radius: 20px;
     }
     .info{
-        /* background-color:cadetblue; */
         width: 65%;
         height: 60%;
         display: flex;
@@ -1062,30 +1061,28 @@ body {
         font-size: 40px;
     }
     .abut{
-        font-size:23px
+        font-size:23px;
     }
     .btnBox {
-       
-        justify-content:flex-start
-
+        justify-content:flex-start;
     }
     .btnBox button{
         font-size: 30px;
         margin-right: 50px;
     }
-
 }
+
 .skills-section{
     padding-top: 20px;
-  
-   
     }
+
 .skills-header{
     text-align: center;
     color: #fff;
     padding: 1rem;
     position: relative;
     }
+
 .skills-header:after{
     content: '';
     position: absolute;
@@ -1097,6 +1094,7 @@ body {
     background-color: #2ecc71;
     border-radius: 2px;
     }
+
 .skills-container{
     display: flex;
     flex-wrap: wrap;
@@ -1110,20 +1108,25 @@ body {
  
     
     }
+
 .skills-box{
+       
     width: 400px;
     padding: 1rem 90px;
     color: #000;
     cursor:pointer;
     background-color: #56695e;
     }
+
 /* .skills-box:hover > .skills-title: after, 
     .skills-box:hover > .skills-title: before{
     width: 30px;
     } */
+
 .skills-box:hover .skills-img{
     transform: translateX(-20px);
     }
+
 .skills-title{
     display:flex;
     flex-direction: column;
@@ -1132,6 +1135,7 @@ body {
     margin-bottom: 0.5rem;
     position: relative;
     }
+
 .skills-title:after{
     content: '';
     position:absolute;
@@ -1143,6 +1147,7 @@ body {
     background-color: #2ecc71;
     transition: .5s;
     }
+
 .skills-title:before{
     content: '';
     position:absolute;
@@ -1153,10 +1158,12 @@ body {
     border-radius: 0 2px 2px 0;
     background-color: #2ecc71;
     }
+
 .skills-icons{
     width:50px;
     z-index:2;
     }
+
 .skills-img{
     width:90px;
     height:90px;
@@ -1168,9 +1175,11 @@ body {
     align-items:center;
     transition: .5s;
     }
+
 .cvlink{
         text-decoration: none;
     }
+
 .skills-img:after{
     content: '';
     position:absolute;
@@ -1181,22 +1190,25 @@ body {
     background: rgba(100, 100, 100, 0.5);
     border-radius: 45px 0 0 45px;
     }
+
 .skills-title h3{
     color: #333;
     margin-top: 0.5rem;
     }
+
 @media screen and (max-width:990px){
      .skills-container{
      grid-tempLate-columns: repeat(2, 1fr);
      padding: 2rem 50px;
      }
     }
+
 @media screen and (max-width:650px){
      .skills-container{
      grid-tempLate-columns:2fr;
      padding: 2rem 50px;
      }
-    }
+}
 .Contact{
     /* background-color: antiquewhite; */
     overflow-y: auto;

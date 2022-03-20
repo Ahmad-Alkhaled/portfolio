@@ -37803,7 +37803,7 @@ const Abute = (params)=>{
                                 className: "btnBox",
                                 children: [
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                        href: "http://localhost:5000/CV",
+                                        href: "https://portfoliokhafasch.herokuapp.com/CV",
                                         className: "cvlink",
                                         target: "_blank",
                                         rel: "noreferrer",
@@ -39071,7 +39071,7 @@ const Contact = (params)=>{
                 massage: Massage
             };
             e.preventDefault();
-            if (emailRegex.test(Email)) _axiosDefault.default.post('http://localhost:5000/massage', data).then(()=>{
+            if (emailRegex.test(Email)) _axiosDefault.default.post('https://portfoliokhafasch.herokuapp.com/massage', data).then(()=>{
                 setName('');
                 setMassage('');
                 setSubject('');

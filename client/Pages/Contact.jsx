@@ -25,7 +25,7 @@ const Contact = (params) => {
                     e.preventDefault()
                     if (emailRegex.test(Email)) 
                      {
-                        axios.post('https://portfolioahmad1.herokuapp.com',data)
+                        axios.post('https://portfolioahmad1.herokuapp.com/test',data)
                         .then(()=>{
                             setName('');
                             setMassage('');

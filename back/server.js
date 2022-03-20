@@ -36,23 +36,23 @@ const transporter = nodemailer.createTransport({
 
 app.post('/test', (req, res) =>{
 
-    // const mailOptions = {
-    //     from:'almzrab@gmail.com',
-    //     to:'ws.ahmadbx@gmail.com',
-    //     subject:'massage',
-    //     text:` 
-    //     from : ${ req.body.name } 
-    //     Email : ${ req.body.email } 
-    //     subject : ${ req.body.subject }
-    //     massage :    ${req.body.massage}`
-    // }
+    const mailOptions = {
+        from:'almzrab@gmail.com',
+        to:'ws.ahmadbx@gmail.com',
+        subject:'massage',
+        text:` 
+        from : ${ req.body.name } 
+        Email : ${ req.body.email } 
+        subject : ${ req.body.subject }
+        massage :    ${req.body.massage}`
+    }
 
-    // const mailOptions1 = {
-    //     from:'almzrab@gmail.com',
-    //     to:req.body.email,
-    //     subject:'auto massage',
-    //     text:` Hi ${ req.body.name } \ni got your massage and i will try to connect you as soon as posible. \n\n Ahmad   `
-    // }
+    const mailOptions1 = {
+        from:'almzrab@gmail.com',
+        to:req.body.email,
+        subject:'auto massage',
+        text:` Hi ${ req.body.name } \ni got your massage and i will try to connect you as soon as posible. \n\n Ahmad   `
+    }
 
 
 

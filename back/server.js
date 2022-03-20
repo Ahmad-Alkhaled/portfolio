@@ -33,10 +33,8 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/test',()=>{
-    res.status(200).json({
-        success:true,
-        massage:'iuhiuh'
-    })
+
+    res.status(200).send('oihoiho')
 
 })
 

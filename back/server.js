@@ -56,33 +56,33 @@ app.post('/test', (req, res) =>{
 
 
 
-    mongoose.connect(`mongodb+srv://AHMAD:AHMAD@cluster0.hrmsx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
-    .then(() => {
-        console.log(' mongodb connected .. ');
-        massage.create(req.body)
-        .then(() => {
-            console.log('massage created successfully');
-            res.status(200).json({
-                success: true,
-                massage:'massage created successfully '
-            })
-            mongoose.connection.close();
-            // transporter.sendMail(mailOptions1, (err, info) =>{ 
-            //     if(err){ 
-            //         console.log(err);
-            //     }else{
-            //         console.log(' Email sended', info.response);
-            //     }
-            //  })
-            // transporter.sendMail(mailOptions, (err, info) =>{ 
-            //     if(err){ 
-            //         console.log(err);
-            //     }else{
-            //         console.log(' Email sended', info.response);
-            //     }
-            //  })
-        });
-    });
+    // mongoose.connect(`mongodb+srv://AHMAD:AHMAD@cluster0.hrmsx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
+    // .then(() => {
+    //     console.log(' mongodb connected .. ');
+    //     massage.create(req.body)
+    //     .then(() => {
+    //         console.log('massage created successfully');
+    //         res.status(200).json({
+    //             success: true,
+    //             massage:'massage created successfully '
+    //         })
+    //         mongoose.connection.close();
+            transporter.sendMail(mailOptions1, (err, info) =>{ 
+                if(err){ 
+                    console.log(err);
+                }else{
+                    console.log(' Email sended', info.response);
+                }
+             })
+            transporter.sendMail(mailOptions, (err, info) =>{ 
+                if(err){ 
+                    console.log(err);
+                }else{
+                    console.log(' Email sended', info.response);
+                }
+             })
+    //     });
+    // });
 });
 
 app.get('/CV', (req , res ) => {

@@ -32,6 +32,14 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+app.post('/test',()=>{
+
+    res.status(200).json({
+        success:true,
+        massage:'iujhiuhiuh'
+    })
+})
+
 app.post('/massage', (req, res) =>{
 
     const mailOptions = {

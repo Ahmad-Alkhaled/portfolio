@@ -39,7 +39,7 @@ app.post('/test',()=>{
 });
 app.get('/test',()=>{
 
-    res.status(200).send('oihoiho');
+    res.status(200).json({"ergerg":'oihoiho'});
 
 });
 

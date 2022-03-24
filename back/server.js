@@ -34,12 +34,12 @@ const transporter = nodemailer.createTransport({
 
 app.post('/test',()=>{
 
-    res.status(200).send('oihoiho')
+    res.status(200).send('oihoiho');
 
-})
+});
 
 
-app.post('/', (req, res) =>{
+app.post('/massage', (req, res) =>{
 
     // const mailOptions = {
     //     from:'almzrab@gmail.com',

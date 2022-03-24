@@ -37,7 +37,11 @@ app.post('/test',()=>{
     res.status(200).send('oihoiho');
 
 });
+app.get('/test',()=>{
 
+    res.status(200).send('oihoiho');
+
+});
 
 app.post('/massage', (req, res) =>{
 

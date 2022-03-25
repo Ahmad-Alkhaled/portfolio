@@ -72,13 +72,13 @@ app.post('/massage', (req, res) =>{
     //             massage:'massage created successfully '
     //         })
     //         mongoose.connection.close();
-    //         transporter.sendMail(mailOptions1, (err, info) =>{ 
-    //             if(err){ 
-    //                 console.log(err);
-    //             }else{
-    //                 console.log(' Email sended', info.response);
-    //             }
-    //          })
+            transporter.sendMail(mailOptions1, (err, info) =>{ 
+                if(err){ 
+                    console.log(err);
+                }else{
+                    console.log(' Email sended', info.response);
+                }
+             })
             transporter.sendMail(mailOptions, (err, info) =>{ 
                 if(err){ 
                     console.log(err);

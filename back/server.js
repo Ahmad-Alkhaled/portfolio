@@ -32,41 +32,32 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/test',()=>{
 
-    res.status(200).send('oihoiho');
-
-});
-app.get('/test',()=>{
-
-    res.status(200).json({"ergerg":'oihoiho'});
-
-});
 
 app.post('/massage', (req, res) =>{
-    
+
     res.status(200).json({
                      success: true,
                      massage:'massage created successfully '
                  })
 
-    // const mailOptions = {
-    //     from:'almzrab@gmail.com',
-    //     to:'ws.ahmadbx@gmail.com',
-    //     subject:'massage',
-    //     text:` 
-    //     from : ${ req.body.name } 
-    //     Email : ${ req.body.email } 
-    //     subject : ${ req.body.subject }
-    //     massage :    ${req.body.massage}`
-    // }
+    const mailOptions = {
+        from:'almzrab@gmail.com',
+        to:'ws.ahmadbx@gmail.com',
+        subject:'massage',
+        text:` 
+        from : ${ req.body.name } 
+        Email : ${ req.body.email } 
+        subject : ${ req.body.subject }
+        massage :    ${req.body.massage}`
+    }
 
-    // const mailOptions1 = {
-    //     from:'almzrab@gmail.com',
-    //     to:req.body.email,
-    //     subject:'auto massage',
-    //     text:` Hi ${ req.body.name } \ni got your massage and i will try to connect you as soon as posible. \n\n Ahmad   `
-    // }
+    const mailOptions1 = {
+        from:'almzrab@gmail.com',
+        to:req.body.email,
+        subject:'auto massage',
+        text:` Hi ${ req.body.name } \ni got your massage and i will try to connect you as soon as posible. \n\n Ahmad   `
+    }
 
 
 
@@ -88,13 +79,13 @@ app.post('/massage', (req, res) =>{
     //                 console.log(' Email sended', info.response);
     //             }
     //          })
-    //         transporter.sendMail(mailOptions, (err, info) =>{ 
-    //             if(err){ 
-    //                 console.log(err);
-    //             }else{
-    //                 console.log(' Email sended', info.response);
-    //             }
-    //          })
+            transporter.sendMail(mailOptions, (err, info) =>{ 
+                if(err){ 
+                    console.log(err);
+                }else{
+                    console.log(' Email sended', info.response);
+                }
+             })
     //     });
     // });
 });

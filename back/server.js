@@ -24,19 +24,19 @@ app.use(function(req, res, next) {
     next();
 });
 
-const transporter = nodemailer.createTransport({
-    service:'gmail',
-    auth:{
-        user:'almzrab@gmail.com',
-        pass:'Aa90Kk45'
-    }
-});
+
 
 
 
 app.post('/massage', (req, res) =>{
 
-    
+    const transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth:{
+            user:'almzrab@gmail.com',
+            pass:'Aa90Kk45'
+        }
+    });
     const mailOptions = {
         from:'almzrab@gmail.com',
         to:'ws.ahmadbx@gmail.com',

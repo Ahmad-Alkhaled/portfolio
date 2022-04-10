@@ -7,11 +7,11 @@ body{
 }
 .App {
  width: 100vw;
- height: 160vh;
+ height: 100vh;
  background-color: rgb(0, 0, 0);
  transition: background-color 2s;
  overflow: hidden;
- overflow-y: auto;
+
 }
 iframe{
     position: absolute;
@@ -31,6 +31,7 @@ iframe{
 .Page{
     position: absolute;
     z-index: 1;
+   
 }
 .Nav{
     position: absolute;

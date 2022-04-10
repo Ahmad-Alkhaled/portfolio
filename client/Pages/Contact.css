@@ -2,7 +2,10 @@
     /* background-color: antiquewhite; */
     overflow-y: auto;
     padding-bottom: 10px;
-   top:100px
+    height: 800px;
+    top:100px;
+    overflow: hidden;
+    overflow-y: auto;
 }
 .form{
     width: 100%;
@@ -110,16 +113,16 @@
 @media (max-width:425px) 
 {
     .form{
-        
         height: 80%;
-        /* background-color: aqua; */
-        
+        top:0
     }
     .info1{
-        
-        height: 110%;
+        height: 100%;
         margin-left: 0;
-       
+    }
+    .Contact{
+       top:-120px;
+        height: 400px;
     }
    
 }

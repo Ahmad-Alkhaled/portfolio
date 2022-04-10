@@ -37,23 +37,23 @@ const transporter = nodemailer.createTransport({
 app.post('/massage', (req, res) =>{
 
     
-    // const mailOptions = {
-    //     from:'almzrab@gmail.com',
-    //     to:'ws.ahmadbx@gmail.com',
-    //     subject:'massage',
-    //     text:` 
-    //     from : ${ req.body.name } 
-    //     Email : ${ req.body.email } 
-    //     subject : ${ req.body.subject }
-    //     massage :    ${req.body.massage}`
-    // }
+    const mailOptions = {
+        from:'almzrab@gmail.com',
+        to:'ws.ahmadbx@gmail.com',
+        subject:'massage',
+        text:` 
+        from : ${ req.body.name } 
+        Email : ${ req.body.email } 
+        subject : ${ req.body.subject }
+        massage :    ${req.body.massage}`
+    }
 
-    // const mailOptions1 = {
-    //     from:'almzrab@gmail.com',
-    //     to:req.body.email,
-    //     subject:'auto massage',
-    //     text:` Hi ${ req.body.name } \ni got your massage and i will try to connect you as soon as posible. \n\n Ahmad   `
-    // }
+    const mailOptions1 = {
+        from:'almzrab@gmail.com',
+        to:req.body.email,
+        subject:'auto massage',
+        text:` Hi ${ req.body.name } \ni got your massage and i will try to connect you as soon as posible. \n\n Ahmad   `
+    }
 
     mongoose.connect(`mongodb+srv://AHMAD:AHMAD@cluster0.hrmsx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
     .then(() => {
@@ -66,20 +66,20 @@ app.post('/massage', (req, res) =>{
                 massage:'massage created successfully '
             })
             mongoose.connection.close();
-            // transporter.sendMail(mailOptions1, (err, info) =>{ 
-            //     if(err){ 
-            //         console.log(err);
-            //     }else{
-            //         console.log(' Email sended', info.response);
-            //     }
-            //  })
-            // transporter.sendMail(mailOptions, (err, info) =>{ 
-            //     if(err){ 
-            //         console.log(err);
-            //     }else{
-            //         console.log(' Email sended', info.response);
-            //     }
-            //  })
+            transporter.sendMail(mailOptions1, (err, info) =>{ 
+                if(err){ 
+                    console.log(err);
+                }else{
+                    console.log(' Email sended', info.response);
+                }
+             })
+            transporter.sendMail(mailOptions, (err, info) =>{ 
+                if(err){ 
+                    console.log(err);
+                }else{
+                    console.log(' Email sended', info.response);
+                }
+             })
         });
     });
 });

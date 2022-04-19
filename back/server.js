@@ -25,9 +25,6 @@ app.use(function(req, res, next) {
 });
 
 
-
-
-
 app.post('/massage', (req, res) =>{
 
     const transporter = nodemailer.createTransport({

@@ -91,12 +91,12 @@ const Contact = (params) => {
                 <div className='pi' >
                     <i className="fas fa-envelope-open"></i>
                         <p> MAIL ME </p>
-                        <p> almzrab@gmail.com</p>
+                        <p> ahmadalkhald161@gmail.com</p>
                     </div>
                 <div className='pi' >
                     <i className="fas fa-phone-square-alt"></i>
                         <p> CALL ME </p>
-                        <p> 03984774653874</p>
+                        <p> 01635849253</p>
                     </div>
                 <div className='icons'>
                     <i className="fab fa-github"  ></i>
